@@ -29,7 +29,7 @@ jobs:
           name: Deploy to Railway App
           command: |
             cd bankchurn-api
-            railway login --token $RAILWAY_TOKEN
+            RAILWAY_TOKEN=$RAILWAY_TOKEN railway login --browserless
             railway up --service=perpetual-dream --detach
             railway up --detach
 
